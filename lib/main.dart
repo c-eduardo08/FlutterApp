@@ -34,7 +34,7 @@ class FirstScreen extends StatelessWidget {
               controller: nameController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: 'Digite seu nome',
+                labelText: 'Digite seu nome.',
               ),
             ),
             ElevatedButton(
