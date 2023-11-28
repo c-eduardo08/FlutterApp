@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Demo Hellos',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -70,7 +70,7 @@ class SecondScreen extends StatelessWidget {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Hello, $name!'),
+          Text('Hello, Olá, Hola, Salut : $name!'),
           ElevatedButton(
             child: Text('Ir para a Terceira Tela'),
             onPressed: () {
@@ -88,15 +88,19 @@ class ThirdScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Terceira Tela')),
-    );
-    Body:
-    Center(
-      child: ElevatedButton(
-      child: Text('Voltar para a primeira tela'),
-      onPressed: () {
-        Navigator.pop(context);
-      },
-    ));
+        appBar: AppBar(title: Text('Terceira Tela')),
+        body: Center(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('ALAHU AKBAR'),
+            ElevatedButton(
+                child: Text('Voltar para a primeira tela'),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MyApp()));
+                })
+          ],
+        )));
   }
 }
